@@ -1,4 +1,8 @@
 const express = require('express')
+const fs = require('fs');
+//const hbs = require('hsb');
+
+const port = process.env.PORT || 3000;
 
 var app = express();
  app.use(express.static(__dirname + "/public"));
@@ -22,6 +26,6 @@ app.get('/bad' , (req, res) => {
     });
 })
 
-app.listen(3000,() =>{
-    console.log("now server is up port 3000");
+app.listen(port,() =>{
+    console.log(`now server is up on port ${3000}`);
 } ) ;
